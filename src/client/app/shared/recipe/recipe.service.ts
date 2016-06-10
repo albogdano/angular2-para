@@ -11,16 +11,21 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class RecipeService {
 
-  private RECIPES_RESOURCE = ('<%= ENV %>' === 'dev')
+  private isDev = ('<%= ENV %>' === 'dev');
+  private appID = this.isDev ? "app:para" : "app:albogdano";
+  private RECIPES_RESOURCE = this.isDev
     ? "http://localhost:8080/v1/recipes" : "https://paraio.com/v1/recipes";
 
   private options = new RequestOptions({ headers:
-    new Headers({ 'Content-Type': 'application/json' }) });
+    new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': 'Anonymous ' + this.appID
+    }) });
 
   constructor(private http: Http) {}
 
   get(): Observable<string[]> {
-      return this.http.get(this.RECIPES_RESOURCE)
+      return this.http.get(this.RECIPES_RESOURCE, this.options)
         .map((response: Response) => response.json());
   }
 
