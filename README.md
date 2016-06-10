@@ -5,7 +5,7 @@
 [![Join the chat at https://gitter.im/Erudika/para](https://badges.gitter.im/Erudika/para.svg)](https://gitter.im/Erudika/para?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This is an example application based on [Angular 2 Seed](https://github.com/mgechev/angular2-seed). 
-It is part of a tutorial on [how to get started quickly with Angular 2](http://erudika.com/blog) 
+It is part of a tutorial on [how to get started quickly with Angular 2](http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/) 
 and how to integrate your Angular frontend with a Para backend.
 It's simple "Recipe manager" app with:
 
