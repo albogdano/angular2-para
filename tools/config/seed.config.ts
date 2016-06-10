@@ -70,7 +70,7 @@ export class SeedConfig {
    * The default path is `/`, which can be overriden by the `--base` flag when running `npm start`.
    * @type {string}
    */
-  APP_BASE = argv['base'] || '/';
+  APP_BASE = this.ENV === ENVIRONMENTS.DEVELOPMENT ? '/' : 'angular2-para/';
 
   /**
    * The flag to include templates into JS app prod file.
