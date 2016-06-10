@@ -38,7 +38,8 @@ li {
   margin-top: 4px;
 }
 
-input, textarea {
+input,
+textarea {
   border: 1px solid #106cc8;
   font-size: 14px;
   outline: none;

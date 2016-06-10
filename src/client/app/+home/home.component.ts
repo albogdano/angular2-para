@@ -1,6 +1,5 @@
 import { FORM_DIRECTIVES } from '@angular/common';
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../shared/index';
 
 import *  as  marked from 'marked';
@@ -14,7 +13,7 @@ import *  as  marked from 'marked';
   styleUrls: ['home.component.css'],
   directives: [FORM_DIRECTIVES]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   newName: string;
   newRecipe: string;
@@ -41,7 +40,7 @@ export class HomeComponent {
   addRecipe(): boolean {
     if (this.recipeId) {
       this.recipesList.map((el) => {
-        if (el.id == this.recipeId) {
+        if (el.id === this.recipeId) {
           el.name = this.newName;
           el.text = this.newRecipe;
         }
@@ -83,11 +82,11 @@ export class HomeComponent {
   }
 
   md2html(text: string) {
-    return marked(text || "");
+    return marked(text || '');
   }
 
   search(): boolean {
-    this.recipeService.search(this.q || "*").subscribe((data:any) => {
+    this.recipeService.search(this.q || '*').subscribe((data:any) => {
       if (data.items) {
         this.recipesList = data.items;
       }

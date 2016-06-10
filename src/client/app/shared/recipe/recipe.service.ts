@@ -12,9 +12,9 @@ import 'rxjs/add/operator/toPromise';
 export class RecipeService {
 
   private isDev = ('<%= ENV %>' === 'dev');
-  private appID = this.isDev ? "app:para" : "app:albogdano";
+  private appID = this.isDev ? 'app:para' : 'app:albogdano';
   private RECIPES_RESOURCE = this.isDev
-    ? "http://localhost:8080/v1/recipes" : "https://paraio.com/v1/recipes";
+    ? 'http://localhost:8080/v1/recipes' : 'https://paraio.com/v1/recipes';
 
   private options = new RequestOptions({ headers:
     new Headers({
@@ -39,16 +39,16 @@ export class RecipeService {
   edit(id: any, name: string, text: string) {
     if (!id) { return; }
     let recipe:any = { name: name, text: text };
-    this.http.patch(this.RECIPES_RESOURCE + "/" + id, JSON.stringify(recipe), this.options).toPromise();
+    this.http.patch(this.RECIPES_RESOURCE + '/' + id, JSON.stringify(recipe), this.options).toPromise();
   }
 
   remove(id: string) {
     if (!id) { return; }
-    this.http.delete(this.RECIPES_RESOURCE + "/" + id, this.options).toPromise();
+    this.http.delete(this.RECIPES_RESOURCE + '/' + id, this.options).toPromise();
   }
 
   search(q: string): Observable<string[]> {
-    return this.http.get(this.RECIPES_RESOURCE + "?q=" + q)
+    return this.http.get(this.RECIPES_RESOURCE + '?q=' + q)
         .map((response: Response) => response.json());
   }
 }
