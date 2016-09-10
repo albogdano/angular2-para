@@ -48,7 +48,7 @@ export class RecipeService {
   }
 
   search(q: string): Observable<string[]> {
-    return this.http.get(this.RECIPES_RESOURCE + '?q=' + q)
+    return this.http.get(this.RECIPES_RESOURCE + '?q=' + q, this.options)
         .map((response: Response) => response.json());
   }
 }
