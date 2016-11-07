@@ -4,7 +4,7 @@
 
 [![Join the chat at https://gitter.im/Erudika/para](https://badges.gitter.im/Erudika/para.svg)](https://gitter.im/Erudika/para?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This is an example application based on [Angular 2 Seed](https://github.com/mgechev/angular2-seed). 
+This is an example application based on [Angular 2 Seed](https://github.com/mgechev/angular-seed). 
 It is part of a tutorial on [how to get started quickly with Angular 2](http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/) 
 and how to integrate your Angular frontend with a Para backend.
 It's simple "Recipe manager" app with:
@@ -32,12 +32,12 @@ Angular 2 Seed provides the following features:
 
 **Note** that this seed project requires node v4.x.x or higher and npm 2.14.7.
 
-**Here is how to [speed-up the build on Windows](https://github.com/mgechev/angular2-seed/wiki/Speed-up-the-build-on-Windows)**.
+**Here is how to [speed-up the build on Windows](https://github.com/mgechev/angular-seed/wiki/Speed-up-the-build-on-Windows)**.
 
 In order to start the seed use:
 
 ```bash
-git clone --depth 1 https://github.com/mgechev/angular2-seed.git
+git clone --depth 1 https://github.com/mgechev/angular-seed.git
 cd angular2-seed
 # install the project's dependencies
 npm install
