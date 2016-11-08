@@ -1,9 +1,9 @@
-import { provide, ReflectiveInjector } from '@angular/core';
-import { BaseRequestOptions, ConnectionBackend, Http, HTTP_PROVIDERS, Response, ResponseOptions } from '@angular/http';
+import { ReflectiveInjector } from '@angular/core';
+import { BaseRequestOptions, ConnectionBackend, Http, Response, ResponseOptions } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { Observable } from 'rxjs/Observable';
 
-import { RecipeService } from './name-list.service';
+import { RecipeService } from './recipe.service';
 
 export function main() {
   describe('NameList Service', () => {
@@ -13,7 +13,6 @@ export function main() {
 
     beforeEach(() => {
       let injector = ReflectiveInjector.resolveAndCreate([
-        HTTP_PROVIDERS,
         RecipeService,
         BaseRequestOptions,
         MockBackend,

@@ -11,10 +11,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class RecipeService {
 
-  private isDev = ('<%= ENV %>' === 'dev');
-  private appID = this.isDev ? 'app:para' : 'app:albogdano';
-  private RECIPES_RESOURCE = this.isDev
-    ? 'http://localhost:8080/v1/recipes' : 'https://paraio.com/v1/recipes';
+  private appID = 'app:albogdano';
+  private RECIPES_RESOURCE = 'https://paraio.com/v1/recipes';
 
   private options = new RequestOptions({ headers:
     new Headers({
