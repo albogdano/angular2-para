@@ -7,28 +7,29 @@ import { RecipeService } from './recipe.service';
 
 export function main() {
   describe('NameList Service', () => {
-    let RecipeService: RecipeService;
-    let backend: MockBackend;
+    let nameListService: RecipeService;
+    let mockBackend: MockBackend;
     let initialResponse: any;
 
     beforeEach(() => {
+
       let injector = ReflectiveInjector.resolveAndCreate([
         RecipeService,
         BaseRequestOptions,
         MockBackend,
-        provide(Http, {
+        {provide: Http,
           useFactory: function(backend: ConnectionBackend, defaultOptions: BaseRequestOptions) {
             return new Http(backend, defaultOptions);
           },
           deps: [MockBackend, BaseRequestOptions]
-        }),
+        },
       ]);
-      RecipeService = injector.get(RecipeService);
-      backend = injector.get(MockBackend);
+      nameListService = injector.get(RecipeService);
+      mockBackend = injector.get(MockBackend);
 
       let connection: any;
-      backend.connections.subscribe((c: any) => connection = c);
-      initialResponse = RecipeService.get();
+      mockBackend.connections.subscribe((c: any) => connection = c);
+      initialResponse = nameListService.get();
       connection.mockRespond(new Response(new ResponseOptions({ body: '["Dijkstra", "Hopper"]' })));
     });
 
