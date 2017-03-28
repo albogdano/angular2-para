@@ -30,15 +30,13 @@ Angular 2 Seed provides the following features:
 
 # How to start
 
-**Note** that this seed project requires node v4.x.x or higher and npm 2.14.7.
-
-**Here is how to [speed-up the build on Windows](https://github.com/mgechev/angular-seed/wiki/Speed-up-the-build-on-Windows)**.
+**Note** that this seed project requires NodeJS v4.x.x or higher and npm 2.14.7+.
 
 In order to start the seed use:
 
 ```bash
-git clone --depth 1 https://github.com/mgechev/angular-seed.git
-cd angular-seed
+git clone --depth 1 https://github.com/albogdano/angular2-para.git
+cd angular2-para
 # install the project's dependencies
 npm install
 # watches your files and uses livereload by default
@@ -51,6 +49,7 @@ npm run build.dev
 # prod build
 npm run build.prod
 ```
+If your build is slowe on Windows, check out [how to speed-up the build on Windows](https://github.com/mgechev/angular-seed/wiki/Speed-up-the-build-on-Windows).
 
 # License
 
