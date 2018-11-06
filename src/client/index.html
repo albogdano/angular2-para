@@ -7,6 +7,8 @@
   <title><%= APP_TITLE %></title>
   <meta name="description" content="Example project, demonstrating how Para is integrated with Angular 2">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="<%= APP_BASE %>assets/favicon/favicon-<%= ENV_CONFIG.ENV %>.ico" type="image/x-icon">
+
   <!-- inject:css -->
   <!-- endinject -->
   <script>
@@ -34,7 +36,7 @@
   <!-- endinject -->
 
   <% if (BUILD_TYPE === 'dev') { %>
-  <script src="<%= APP_BASE %>app/system-config.js"></script>
+  <script src="<%= APP_BASE %>system-config.js"></script>
   <% } %>
 
   <!-- libs:js -->

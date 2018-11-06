@@ -26,6 +26,9 @@ export class HomeComponent implements OnInit {
   constructor(public recipeService: RecipeService) {
   }
 
+  /**
+   * Get the names OnInit
+   */
   ngOnInit() {
     this.listRecipes();
   }

@@ -1,10 +1,12 @@
+import * as colors from 'ansi-colors';
 import * as autoprefixer from 'autoprefixer';
 import * as cssnano from 'cssnano';
+import * as log from 'fancy-log';
 import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 import * as merge from 'merge-stream';
-import * as util from 'gulp-util';
 import * as filter from 'gulp-filter';
+import * as through2 from 'through2';
 import { join } from 'path';
 
 import Config from '../../config';
@@ -19,7 +21,7 @@ const processors = [
   })
 ];
 
-const reportPostCssError = (e: any) => util.log(util.colors.red(e.message));
+const reportPostCssError = (e: any) => log(colors.red(e.message));
 
 const isProd = Config.BUILD_TYPE === 'prod';
 
@@ -36,7 +38,7 @@ if (isProd) {
 
 const appSCSSFiles      = join(Config.APP_SRC, '**', '*.scss');
 const entrySCSSFiles    = join(Config.CSS_SRC, '**', '*.scss');
-const abtractSCSSFiles  = join(Config.SCSS_SRC, '**', '*.scss');
+const abstractSCSSFiles = join(Config.SCSS_SRC, '**', '*.scss');
 
 /**
  * Copies all HTML files in `src/client` over to the `dist/tmp` directory.
@@ -62,12 +64,13 @@ function processComponentStylesheets() {
  * Process scss files referenced from Angular component `styleUrls` metadata
  */
 function processComponentScss() {
-  return getSCSSFiles('process-component-scss', [appSCSSFiles], [abtractSCSSFiles])
-    .pipe(plugins.sourcemaps.init())
+
+  return getSCSSFiles('process-component-scss', [appSCSSFiles], [abstractSCSSFiles])
+    .pipe(isProd ? through2.obj() : plugins.sourcemaps.init())
     .pipe(plugins.sass(Config.getPluginConfig('gulp-sass')).on('error', plugins.sass.logError))
     .pipe(plugins.postcss(processors))
     .on('error', reportPostCssError)
-    .pipe(plugins.sourcemaps.write(isProd ? '.' : '', {
+    .pipe(isProd ? through2.obj() : plugins.sourcemaps.write('', {
       sourceMappingURL: (file: any) => {
         // write absolute urls to the map files
         return `${Config.APP_BASE}${file.relative}.map`;
@@ -77,12 +80,12 @@ function processComponentScss() {
 }
 
 /**
- + * Get SCSS Files to process
- + */
-function getSCSSFiles(cacheName:string, filesToCompile:string[], filesToExclude:string[] = []) {
-  let allFiles:string[] = filesToCompile.concat(filesToExclude);
-  let filteredFiles:string[] = filesToCompile.concat(
-    filesToExclude.map((path:string) => { return '!' + path; })
+ * Get SCSS Files to process
+ */
+function getSCSSFiles(cacheName: string, filesToCompile: string[], filesToExclude: string[] = []) {
+  const allFiles: string[] = filesToCompile.concat(filesToExclude);
+  const filteredFiles: string[] = filesToCompile.concat(
+    filesToExclude.map((path: string) => { return '!' + path; })
   );
   return gulp.src(allFiles)
     .pipe(plugins.cached(cacheName))
@@ -99,7 +102,7 @@ function processComponentCss() {
     join(Config.APP_SRC, '**', '*.css'),
     '!' + join(Config.APP_SRC, 'assets', '**', '*.css')
   ])
-    .pipe(isProd ? plugins.cached('process-component-css') : plugins.util.noop())
+    .pipe(isProd ? plugins.cached('process-component-css') : through2.obj())
     .pipe(plugins.postcss(processors))
     .on('error', reportPostCssError)
     .pipe(gulp.dest(isProd ? Config.TMP_DIR : Config.APP_DEST));
@@ -118,7 +121,7 @@ function processExternalStylesheets() {
  */
 function processAllExternalStylesheets() {
   return merge(getExternalCssStream(), getExternalScssStream())
-    .pipe(isProd ? plugins.concatCss(gulpConcatCssConfig.targetFile, gulpConcatCssConfig.options) : plugins.util.noop())
+    .pipe(isProd ? plugins.concatCss(gulpConcatCssConfig.targetFile, gulpConcatCssConfig.options) : through2.obj())
     .pipe(plugins.postcss(processors))
     .on('error', reportPostCssError)
     .pipe(gulp.dest(Config.CSS_DEST));
@@ -129,7 +132,7 @@ function processAllExternalStylesheets() {
  */
 function getExternalCssStream() {
   return gulp.src(getExternalCss())
-    .pipe(isProd ? plugins.cached('process-external-css') : plugins.util.noop());
+    .pipe(isProd ? plugins.cached('process-external-css') : through2.obj());
 }
 
 /**
@@ -143,7 +146,7 @@ function getExternalCss() {
  * Get a stream of external scss files for subsequent processing.
  */
 function getExternalScssStream() {
-  return getSCSSFiles('process-external-scss', getExternalScss(), [abtractSCSSFiles])
+  return getSCSSFiles('process-external-scss', getExternalScss(), [abstractSCSSFiles])
     .pipe(plugins.sass(Config.getPluginConfig('gulp-sass')).on('error', plugins.sass.logError));
 }
 
@@ -162,7 +165,7 @@ function getExternalScss() {
 function processExternalCss() {
   return getExternalCssStream()
     .pipe(plugins.postcss(processors))
-    .pipe(isProd ? plugins.concatCss(gulpConcatCssConfig.targetFile, gulpConcatCssConfig.options) : plugins.util.noop())
+    .pipe(isProd ? plugins.concatCss(gulpConcatCssConfig.targetFile, gulpConcatCssConfig.options) : through2.obj())
     .on('error', reportPostCssError)
     .pipe(gulp.dest(Config.CSS_DEST));
 }

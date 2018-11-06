@@ -14,6 +14,12 @@ lib-cov
 coverage
 coverage_js
 
+# Directory for source-map-explorer reports
+sme
+
+# ignore documentation
+documentation
+
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
@@ -39,9 +45,11 @@ ts-node
 /tools/**/*.js
 dist
 dev
+docs
 lib
 test
 tmp
+cypress/videos
 
 gulpfile.js
 gulpfile.js.map
@@ -50,3 +58,7 @@ gulpfile.js.map
 .DS_Store
 src/client/app/shared/config/env.config.js
 src/client/app/shared/config/env.config.js.map
+
+tools/env/env-config.interface.d.ts
+tools/env/env-config.interface.ngsummary.json
+tools/manual_typings/project/sample.package.ngsummary.json

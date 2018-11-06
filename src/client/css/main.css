@@ -1,14 +1,22 @@
 /* Reset */
-html,
-body,
-div {
+html, body, div {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Box-sizing border-box */
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -42,6 +50,7 @@ input,
 textarea {
   border: 1px solid #106cc8;
   font-size: 14px;
+  height: 40px;
   outline: none;
   padding: 8px;
 }
@@ -51,6 +60,7 @@ button {
   border-style: none;
   color: rgba(255, 255, 255, 0.87);
   cursor: pointer;
+  display: inline-block;
   font-size: 14px;
   height: 40px;
   padding: 8px 18px;
