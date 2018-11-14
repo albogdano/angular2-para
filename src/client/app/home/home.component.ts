@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipeService } from '../shared/recipe/index';
-
+import { RecipeService } from '../shared/recipe/recipe.service';
 import * as marked from 'marked';
 
 /**
@@ -15,15 +14,14 @@ import * as marked from 'marked';
 
 export class HomeComponent implements OnInit {
 
-  newName: string;
-  newRecipe: string;
-  recipeId: string;
   recipesList: Array<any>;
-  editMode = false;
-  showForm = false;
+  createMode = false;
   q: string;
+  editedRecipes: Map<string, boolean>;
 
   constructor(public recipeService: RecipeService) {
+    this.editedRecipes = new Map<string, boolean>();
+    this.recipesList = new Array();
   }
 
   /**
@@ -35,61 +33,62 @@ export class HomeComponent implements OnInit {
 
   listRecipes() {
     this.recipeService.get()
-      .subscribe((data:any) => {
+      .subscribe((data: any) => {
         this.recipesList = data.items;
       });
   }
 
-  addRecipe(): boolean {
-    if (this.recipeId) {
-      this.recipesList.map((el) => {
-        if (el.id === this.recipeId) {
-          el.name = this.newName;
-          el.text = this.newRecipe;
-        }
-      });
-      this.recipeService.edit(this.recipeId, this.newName, this.newRecipe);
+  addRecipe(recipe: any) {
+    if (recipe && recipe.id) {
+      this.recipeService.edit(recipe.id, recipe.name, recipe.text).subscribe();
     } else {
-      this.recipeService.add(this.newName, this.newRecipe)
+      this.recipeService.add(recipe.name, recipe.text)
         .subscribe((data: any) => {
           if (data) {
-            this.recipesList.unshift(data);
+            if (this.createMode) {
+              const first = this.recipesList.shift();
+              this.recipesList.unshift(data);
+              this.recipesList.unshift(first);
+            } else {
+              this.recipesList.unshift(data);
+            }
           }
         });
     }
-    this.clearForm();
-    return false;
+    this.closeForm(recipe.id);
   }
 
   editRecipe(recipe: any) {
-    this.editMode = true;
-    this.showForm = true;
-    this.recipeId = recipe.id;
-    this.newName = recipe.name;
-    this.newRecipe = recipe.text;
+    this.editedRecipes.set(recipe.id, true);
   }
 
   removeRecipe(id: string) {
-    this.recipeService.remove(id);
+    this.recipeService.remove(id).subscribe();
     this.recipesList = this.recipesList.filter((el) => el.id !== id);
-    this.clearForm();
   }
 
-  clearForm(): boolean {
-    this.showForm = false;
-    this.editMode = false;
-    this.recipeId = null;
-    this.newName = '';
-    this.newRecipe = '';
-    return true;
+  newRecipeForm() {
+    if (!this.createMode) {
+      this.recipesList.unshift({name: '', text: ''});
+      this.createMode = true;
+    }
   }
 
-  md2html(text: string) {
+  closeForm(recipeId: string) {
+    if (recipeId) {
+      this.editedRecipes.set(recipeId, false);
+    } else if (this.createMode) {
+      this.recipesList.shift();
+      this.createMode = false;
+    }
+  }
+
+  md2html(text: string): string {
     return marked(text || '');
   }
 
   search(): boolean {
-    this.recipeService.search(this.q || '*').subscribe((data:any) => {
+    this.recipeService.search(this.q || '*').subscribe((data: any) => {
       if (data.items) {
         this.recipesList = data.items;
       }

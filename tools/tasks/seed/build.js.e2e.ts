@@ -13,14 +13,14 @@ const jsonSystemConfig = JSON.stringify(Config.SYSTEM_CONFIG_DEV);
  * for the e2e environment.
  */
 export = () => {
-  let tsProject = makeTsProject();
-  let src = [
+  const tsProject = makeTsProject();
+  const src = [
     Config.TOOLS_DIR + '/manual_typings/**/*.d.ts',
     join(Config.APP_SRC, '**/*.ts'),
     '!' + join(Config.APP_SRC, '**/*.spec.ts'),
     '!' + join(Config.APP_SRC, `**/${Config.NG_FACTORY_FILE}.ts`)
   ];
-  let result = gulp.src(src)
+  const result = gulp.src(src)
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(tsProject());

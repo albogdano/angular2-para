@@ -13,7 +13,7 @@ export = (done: any) => {
     minify: true,
     mangle: false
   };
-  var builder = new Builder('./');
+  const builder = new Builder('./');
   builder.config({
     paths: {
       'n:*': 'node_modules/*',
@@ -28,5 +28,5 @@ export = (done: any) => {
   });
   builder.bundle('rxjs', 'node_modules/.tmp/Rx.min.js', options)
     .then(() => done())
-    .catch((error:any) => done(error));
+    .catch((error: any) => done(error));
 };

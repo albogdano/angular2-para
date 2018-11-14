@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Config } from '../../shared/config/env.config';
 
 /**
  * This class represents the toolbar component.
@@ -9,5 +10,11 @@ import { Component } from '@angular/core';
   templateUrl: 'toolbar.component.html',
   styleUrls: ['toolbar.component.css']
 })
-export class ToolbarComponent { }
+
+export class ToolbarComponent {
+  version: string;
+  constructor() {
+    this.version = Config.VERSION;
+  }
+}
 

@@ -13,7 +13,7 @@ export function main() {
 
     beforeEach(() => {
 
-      let injector = ReflectiveInjector.resolveAndCreate([
+      const injector = ReflectiveInjector.resolveAndCreate([
         RecipeService,
         BaseRequestOptions,
         MockBackend,

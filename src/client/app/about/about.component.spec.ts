@@ -23,10 +23,10 @@ export function main() {
         TestBed
           .compileComponents()
           .then(() => {
-            let fixture = TestBed.createComponent(TestComponent);
-            let aboutDOMEl = fixture.debugElement.children[0].nativeElement;
+            const fixture = TestBed.createComponent(TestComponent);
+            const aboutDOMEl = fixture.debugElement.children[0].nativeElement;
 
-	          expect(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Powered by');
+            expect(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Powered by');
           });
         }));
     });
