@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #git add -A && git commit -am "updated angular2-para" && git push origin master
-npm run build.prod --base /angular2-para/
+npm run build.prod --base "/angular2-para/"
 #git checkout gh-pages
 #git rebase master
 cp -rf dist/prod/** ./docs/
