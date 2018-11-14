@@ -13,7 +13,6 @@ export class ProjectConfig extends SeedConfig {
 
   constructor() {
     super();
-    this.APP_BASE = '/angular2-para/';
 
     // this.APP_TITLE = 'Put name of your app here';
     // this.GOOGLE_ANALYTICS_ID = 'Your site's ID';
