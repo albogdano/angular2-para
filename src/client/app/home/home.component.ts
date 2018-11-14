@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
   }
 
   md2html(text: string): string {
-    return marked(text || '');
+    return marked.parse(text || '');
   }
 
   search(): boolean {
