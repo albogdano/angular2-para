@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "appData": {
+    "test": true
+  },
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "appshell",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/data.json",
+        "/assets/favicon/favicon-DEV.ico",
+        "/assets/favicon/favicon-PROD.ico",
+        "/assets/svg/logo.svg",
+        "/assets/svg/more.svg",
+        "/css/main.css",
+        "/index.html",
+        "/js/app.js",
+        "/js/shims.js",
+        "/ngsw-worker.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-freshness",
+      "patterns": [
+        "\\/timeline"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 60000,
+      "version": 1
+    },
+    {
+      "name": "api-performance",
+      "patterns": [
+        "\\/favorites"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 60000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/data.json": "4442de734b100da8d244b35d34a355dee4dd9618",
+    "/assets/favicon/favicon-DEV.ico": "3fc1138d18aff5d1f5a365e5d9acf55d550fbd3b",
+    "/assets/favicon/favicon-PROD.ico": "3fc1138d18aff5d1f5a365e5d9acf55d550fbd3b",
+    "/assets/svg/logo.svg": "0a82575f1175bcfec47f0fde8459c38e91879570",
+    "/assets/svg/more.svg": "9838cd822e0f989a0befbd365365ee2751bbdebc",
+    "/css/main.css": "80a1275ed311369282b0fa32d077c58a16e15099",
+    "/index.html": "800eeefe66b8da78814d21fe0effa1985b17cab9",
+    "/js/app.js": "4b10dee46c88173edd35acdbed388d5cef64387d",
+    "/js/shims.js": "66c4e1f4861431cb278e3a5c93def5ab32079bbf",
+    "/ngsw-worker.js": "a17d245a00c27ddedc60c64331b104dff58765bc"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
