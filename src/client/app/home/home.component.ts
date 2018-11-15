@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../shared/recipe/recipe.service';
-import * as showdown from 'showdown';
+import showdown from 'showdown';
 
 /**
  * This class represents the lazy loaded HomeComponent.
