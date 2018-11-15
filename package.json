@@ -71,10 +71,10 @@
     "@types/gulp-load-plugins": "^0.0.31",
     "@types/gulp-sass": "^0.0.31",
     "@types/gulp-util": "^3.0.34",
-    "@types/marked": "^0.4.2",
     "@types/node": "^10.7.1",
     "@types/rimraf": "2.0.2",
     "@types/run-sequence": "^0.0.30",
+    "@types/showdown": "^1.7.5",
     "@types/systemjs": "^0.20.6",
     "@types/through2": "^2.0.34",
     "@types/yargs": "12.0.0",
@@ -154,8 +154,8 @@
     "@angular/service-worker": "^7.0.2",
     "core-js": "^2.5.7",
     "intl": "^1.2.5",
-    "marked": "^0.5.1",
     "rxjs": "^6.2.2",
+    "showdown": "^1.9.0",
     "systemjs": "0.21.5",
     "zone.js": "~0.8.26"
   }

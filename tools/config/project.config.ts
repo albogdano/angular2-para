@@ -36,21 +36,21 @@ export class ProjectConfig extends SeedConfig {
 
     this.ROLLUP_INCLUDE_DIR = [
       ...this.ROLLUP_INCLUDE_DIR,
-      //'node_modules/marked/**'
+      'node_modules/showdown/**'
       //'node_modules/moment/**'
     ];
 
     this.ROLLUP_NAMED_EXPORTS = [
       ...this.ROLLUP_NAMED_EXPORTS,
-      //{'node_modules/marked/lib/marked.js': [ 'marked' ]},
+      {'node_modules/showdown/dist/showdown.js': [ 'showdown' ]},
       //{'node_modules/immutable/dist/immutable.js': [ 'Map' ]},
     ];
 
     // Add packages (e.g. ng2-translate)
     const additionalPackages: ExtendPackages[] = [{
-      name: 'marked',
+      name: 'showdown',
       // Path to the package's bundle
-      path: 'node_modules/marked/lib/marked.js'
+      path: 'node_modules/showdown/dist/showdown.min.js'
     }];
 
     this.addPackagesBundles(additionalPackages);
