@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../shared/recipe/recipe.service';
-import showdown from 'showdown';
+import { Converter } from 'showdown';
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
   }
 
   md2html(text: string): string {
-    return new showdown.Converter().makeHtml(text || '');
+    return new Converter().makeHtml(text || '');
   }
 
   search(): boolean {
