@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API: 'https://paraio.com''
+  API: 'https://paraio.com'
 };
