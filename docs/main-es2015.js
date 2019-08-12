@@ -293,6 +293,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_about_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./about/about.module */ "./src/app/about/about.module.ts");
 /* harmony import */ var _home_home_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home.module */ "./src/app/home/home.module.ts");
 /* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 
@@ -318,7 +322,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _about_about_module__WEBPACK_IMPORTED_MODULE_7__["AboutModule"],
             _home_home_module__WEBPACK_IMPORTED_MODULE_8__["HomeModule"],
         ],
-        providers: [_recipe_service__WEBPACK_IMPORTED_MODULE_5__["RecipeService"]],
+        providers: [_recipe_service__WEBPACK_IMPORTED_MODULE_5__["RecipeService"], { provide: _angular_common__WEBPACK_IMPORTED_MODULE_10__["APP_BASE_HREF"], useValue: src_environments_environment__WEBPACK_IMPORTED_MODULE_11__["environment"].base }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
         schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
@@ -740,7 +744,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    API: 'https://paraio.com'
+    API: 'https://paraio.com',
+    base: '/'
 };
 /*
  * For easier debugging in development mode, you can import the following file

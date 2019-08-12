@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API: 'https://paraio.com'
+  API: 'https://paraio.com',
+  base: '/'
 };
 
 /*
