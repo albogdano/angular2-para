@@ -13,7 +13,7 @@ It's a simple recipe manager app with:
 - Full-text search
 - Markdown support
 
-## [Live DEMO](http://albogdano.github.io/angular2-para/)
+## [Live DEMO](https://albogdano.github.io/angular2-para/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
