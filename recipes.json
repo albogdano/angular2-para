@@ -11,7 +11,7 @@
     "votes": 0,
     "objectURI": "/recipeses/714486032707358720",
     "plural": "recipeses",
-    "text": "<img src=\"https://ichef.bbci.co.uk/food/ic/food_16x9_506/recipes/goan_mutton_curry_with_54906_16x9.jpg\" width=\"425\" alt=\"Curry\">\n\n- 1 tsp cumin seeds\n- 1 tsp coriander seeds\n- 1 stick cinnamon\n- 1kg/2lb 2oz mutton leg, boned and cut into 2.5cm/1in cubes\n- 2 onions, finely sliced\n- 2 garlic cloves, crushed\n- 2.5cm/1in piece fresh root ginger, finely grated\n- 2 long red chillies, sliced\n- 3 tbsp tamarind paste"
+    "text": "<img src=\"https://ichef.bbci.co.uk/food/ic/food_16x9_506/recipes/goan_mutton_curry_with_54906_16x9.jpg\" class=\"responsive-img\" alt=\"Curry\">\n\n- 1 tsp cumin seeds\n- 1 tsp coriander seeds\n- 1 stick cinnamon\n- 1kg/2lb 2oz mutton leg, boned and cut into 2.5cm/1in cubes\n- 2 onions, finely sliced\n- 2 garlic cloves, crushed\n- 2.5cm/1in piece fresh root ginger, finely grated\n- 2 long red chillies, sliced\n- 3 tbsp tamarind paste"
   },
   {
     "id": "714196950727004160",
@@ -26,7 +26,7 @@
     "votes": 0,
     "objectURI": "/recipeses/714196950727004160",
     "plural": "recipeses",
-    "text": "<img src=\"https://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/paella_7100_16x9.jpg\" width=\"425\"  alt=\"Paella\">\n\n- 4 tbsp olive oil\n- 60g/2¼oz banana shallots, finely chopped\n- 12 garlic cloves, finely chopped\n- 1 litre/1¾ pint fish stock\n- 100g/3½oz finely chopped flatleaf parsley leaves\n- 1½ tsp salt\n- 400g/14oz short-grain paella rice, such as Calasparra,\n- 30 raw clams, preferably palourde clams, scrubbed\n- 200g/7oz small raw prawns, peeled",
+    "text": "<img src=\"https://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/paella_7100_16x9.jpg\" class=\"responsive-img\"  alt=\"Paella\">\n\n- 4 tbsp olive oil\n- 60g/2¼oz banana shallots, finely chopped\n- 12 garlic cloves, finely chopped\n- 1 litre/1¾ pint fish stock\n- 100g/3½oz finely chopped flatleaf parsley leaves\n- 1½ tsp salt\n- 400g/14oz short-grain paella rice, such as Calasparra,\n- 30 raw clams, preferably palourde clams, scrubbed\n- 200g/7oz small raw prawns, peeled",
     "key": "albogdano_714196950727004160"
   },
   {
@@ -42,7 +42,7 @@
     "votes": 0,
     "objectURI": "/recipeses/713553270055899136",
     "plural": "recipeses",
-    "text": "<img src=\"https://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/rich_christmas_cake_with_41416_16x9.jpg\" width=\"425\" alt=\"Cake\">\n\n- 250g/9oz dark brown sugar\n- 200ml/7fl oz double cream\n- 15g/½oz (about 2 tbsp) mixed spice\n- 250g/9oz unsalted butter\n- 1 tsp orange extract\n- 1 tsp lemon extract\n- 6 medium free-range eggs\n- 350g/12oz currants\n- 350g/12oz raisins\n- 350g/12oz chopped pitted prunes\n- 350g/12oz glacé cherries or more dried fruit\n- 500g/1lb 2oz strong white flour",
+    "text": "<img src=\"https://ichef.bbci.co.uk/food/ic/food_16x9_608/recipes/rich_christmas_cake_with_41416_16x9.jpg\" class=\"responsive-img\" alt=\"Cake\">\n\n- 250g/9oz dark brown sugar\n- 200ml/7fl oz double cream\n- 15g/½oz (about 2 tbsp) mixed spice\n- 250g/9oz unsalted butter\n- 1 tsp orange extract\n- 1 tsp lemon extract\n- 6 medium free-range eggs\n- 350g/12oz currants\n- 350g/12oz raisins\n- 350g/12oz chopped pitted prunes\n- 350g/12oz glacé cherries or more dried fruit\n- 500g/1lb 2oz strong white flour",
     "key": "albogdano_713553270055899136"
   },
   {
@@ -58,7 +58,7 @@
     "votes": 0,
     "objectURI": "/recipeses/711968418189807616",
     "plural": "recipeses",
-    "text": "<img src=\"https://assets.simplyrecipes.com/wp-content/uploads/2014/11/17161128/perfect-mashed-potatoes-horiz-a-1600.jpg\" width=\"425\" alt=\"Patatoes\">\n\n- 1 1/2 lbs (680 g) Yukon Gold potatoes\n- 1/2 teaspoon salt\n- 4 Tbsp (60 ml) heavy cream\n- 2 Tbsp (30 g) butter\n- 1 Tbsp milk (or more)\n- Salt and Pepper",
+    "text": "<img src=\"https://assets.simplyrecipes.com/wp-content/uploads/2014/11/17161128/perfect-mashed-potatoes-horiz-a-1600.jpg\" class=\"responsive-img\" alt=\"Patatoes\">\n\n- 1 1/2 lbs (680 g) Yukon Gold potatoes\n- 1/2 teaspoon salt\n- 4 Tbsp (60 ml) heavy cream\n- 2 Tbsp (30 g) butter\n- 1 Tbsp milk (or more)\n- Salt and Pepper",
     "key": "albogdano_711968418189807616"
   }
 ]

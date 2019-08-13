@@ -77,6 +77,11 @@ button.small {
   height: 30px;
 }
 
+img.responsive-img {
+    max-width: 100%;
+    height: auto
+}
+
 .red {
   color: #e80000;
 }
