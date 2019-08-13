@@ -1,7 +1,8 @@
 <h1>My Recipes &nbsp; <button (click)="newRecipeForm()">Add</button></h1>
 <div>
   <form (submit)="search()">
-    <input type="text" [(ngModel)]="q" name="searchText" placeholder="Search">
+    <label for="search"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDk2IDk2IiBoZWlnaHQ9Ijk2cHgiIGlkPSJtYWduaWZ5aW5nX2dsYXNzIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5NiA5NiIgd2lkdGg9Ijk2cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik05MC42Myw4NC45NzFsLTIyLjUtMjIuNUM3My4wNSw1Ni4zMTEsNzYsNDguNSw3Niw0MEM3NiwyMC4xMiw1OS44OCw0LDQwLDRTNCwyMC4xMiw0LDQwICBzMTYuMTIsMzYsMzYsMzZjOC41LDAsMTYuMzExLTIuOTUsMjIuNDcxLTcuODdsMjIuNSwyMi41YzAuNzc5LDAuNzgsMS44MTIsMS4xNywyLjgyOSwxLjE3YzEuMDIxLDAsMi4wNS0wLjM5LDIuODMtMS4xNyAgQzkyLjE4OSw4OS4wNyw5Mi4xODksODYuNTI5LDkwLjYzLDg0Ljk3MXogTTQwLDY4Yy0xNS40NjQsMC0yOC0xMi41MzYtMjgtMjhzMTIuNTM2LTI4LDI4LTI4czI4LDEyLjUzNiwyOCwyOFM1NS40NjQsNjgsNDAsNjh6IiBpZD0iX3gzQ19QYXRoX3gzRV8iLz48L3N2Zz4=" height="24" alt="search"> &nbsp;</label>
+    <input type="text" [(ngModel)]="q" name="searchText" placeholder="Search" id="search">
   </form>
 </div>
 <ul>
