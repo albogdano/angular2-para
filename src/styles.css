@@ -58,10 +58,11 @@ textarea {
 button {
   background-color: #106cc8;
   border-style: none;
-  color: rgba(255, 255, 255, 0.87);
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
+  font-weight: bold;
   height: 40px;
   padding: 8px 18px;
   text-decoration: none;
