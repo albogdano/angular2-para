@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1565775613813,
+  "timestamp": 1575797874816,
   "index": "/angular2-para/index.html",
   "assetGroups": [
     {
@@ -10,12 +10,12 @@
       "urls": [
         "/angular2-para/favicon.ico",
         "/angular2-para/index.html",
-        "/angular2-para/main-es2015.64ebebfe825ba46bb422.js",
-        "/angular2-para/main-es5.262ccd68777a3c52bd50.js",
-        "/angular2-para/polyfills-es2015.5cb1e996b2a376ba4548.js",
-        "/angular2-para/polyfills-es5.bc4338089e9339f65fd1.js",
-        "/angular2-para/runtime-es2015.5bc68c0dd8cf137fbe82.js",
-        "/angular2-para/runtime-es5.ee0aae13fb762b150814.js",
+        "/angular2-para/main-es2015.2b885ba351e719bab911.js",
+        "/angular2-para/main-es5.60350bd4b310d19d7edb.js",
+        "/angular2-para/polyfills-es2015.8a844354476d4aab1222.js",
+        "/angular2-para/polyfills-es5.2dd721c27129705025a9.js",
+        "/angular2-para/runtime-es2015.ecda22d2152469bce701.js",
+        "/angular2-para/runtime-es5.9e46f86c4d4470dd5413.js",
         "/angular2-para/styles.24b233da563fa9f731c2.css"
       ],
       "patterns": []
@@ -54,15 +54,15 @@
     "/angular2-para/assets/svg/logo.svg": "0a82575f1175bcfec47f0fde8459c38e91879570",
     "/angular2-para/assets/svg/more.svg": "9838cd822e0f989a0befbd365365ee2751bbdebc",
     "/angular2-para/favicon.ico": "3fc1138d18aff5d1f5a365e5d9acf55d550fbd3b",
-    "/angular2-para/index.html": "72e7664e08f510fc39e6cd1ee82c607a0a69f658",
+    "/angular2-para/index.html": "cb9feb19ff7f9c5b96add031bc1b3442b12e7cb8",
     "/angular2-para/logo.99a80ee499fb29f4d93a.svg": "0a82575f1175bcfec47f0fde8459c38e91879570",
-    "/angular2-para/main-es2015.64ebebfe825ba46bb422.js": "55b7a6b692ded09716512fef7d713db1fa72dc48",
-    "/angular2-para/main-es5.262ccd68777a3c52bd50.js": "a879015ddf9c55e5ecc2a2ad9931f2c082554893",
+    "/angular2-para/main-es2015.2b885ba351e719bab911.js": "0af11ee76fffaf1d1ac2775388c74964629e7d9d",
+    "/angular2-para/main-es5.60350bd4b310d19d7edb.js": "dfbef65633e2320d3e6488b82757303a6cf9fcde",
     "/angular2-para/more.04f42f63d9a98931ad03.svg": "9838cd822e0f989a0befbd365365ee2751bbdebc",
-    "/angular2-para/polyfills-es2015.5cb1e996b2a376ba4548.js": "a514da8731833287c9583044e9d512d74c45312a",
-    "/angular2-para/polyfills-es5.bc4338089e9339f65fd1.js": "7e1b38fcb73a9607657630e25f278302170f96dc",
-    "/angular2-para/runtime-es2015.5bc68c0dd8cf137fbe82.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/angular2-para/runtime-es5.ee0aae13fb762b150814.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/angular2-para/polyfills-es2015.8a844354476d4aab1222.js": "f33238825850a8007585a1a80e02e1248268682d",
+    "/angular2-para/polyfills-es5.2dd721c27129705025a9.js": "9d9b583788005b7e2dc51d2b965f7c09b9180c60",
+    "/angular2-para/runtime-es2015.ecda22d2152469bce701.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/angular2-para/runtime-es5.9e46f86c4d4470dd5413.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/angular2-para/styles.24b233da563fa9f731c2.css": "d93c52233918417d7bf27d6e99badf07a089e314"
   },
   "navigationUrls": [
