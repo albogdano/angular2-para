@@ -6,9 +6,10 @@ import { RecipeService } from '../recipe.service';
  * This class represents the lazy loaded HomeComponent.
  */
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.component.html',
-  styleUrls: ['home.component.css'],
+    selector: 'app-home',
+    templateUrl: 'home.component.html',
+    styleUrls: ['home.component.css'],
+    standalone: false
 })
 
 export class HomeComponent implements OnInit {
