@@ -116,6 +116,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-para"
+    }
+  }
 }
