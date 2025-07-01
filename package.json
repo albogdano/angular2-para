@@ -1,6 +1,7 @@
 {
   "name": "angular-para",
   "version": "5.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,24 +16,24 @@
     "@angular/common": "^20.0.5",
     "@angular/compiler": "^20.0.5",
     "@angular/core": "^20.0.5",
-    "@angular/forms": "^20.0.5",
+    "@angular/forms": "^20.0.6",
     "@angular/platform-browser": "^20.0.5",
-    "@angular/platform-browser-dynamic": "^20.0.5",
-    "@angular/router": "^20.0.5",
-    "@angular/service-worker": "^20.0.5",
+    "@angular/platform-browser-dynamic": "^20.0.6",
+    "@angular/router": "^20.0.6",
+    "@angular/service-worker": "^20.0.6",
     "rxjs": "~7.8.2",
-    "showdown": "^1.9.1",
+    "showdown": "^2.1.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.15.1"
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.0.4",
     "@angular/cli": "^20.0.4",
-    "@angular/compiler-cli": "^20.0.5",
-    "@angular/language-service": "^20.0.5",
+    "@angular/compiler-cli": "^20.0.6",
+    "@angular/language-service": "^20.0.6",
     "@types/jasmine": "^5.1.8",
     "@types/jasminewd2": "^2.0.13",
-    "@types/node": "^20.0.0",
+    "@types/node": "^24.0.8",
     "@types/showdown": "^2.0.6",
     "jasmine-core": "~5.8.0",
     "jasmine-spec-reporter": "~7.0.0",
@@ -41,11 +42,10 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
-    "minimist": ">=1.2.2",
-    "protractor": "^7.0.0",
+    "minimist": "^1.2.8",
     "serialize-javascript": "^6.0.2",
     "ts-node": "~10.9.2",
-    "tslint": "~6.1.0",
+    "tslint": "~5.20.1",
     "typescript": "~5.8.3"
   }
 }
