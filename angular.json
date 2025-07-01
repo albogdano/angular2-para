@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-para:build"
+            "buildTarget": "angular-para:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-para:build:production"
+              "buildTarget": "angular-para:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-para:build"
+            "buildTarget": "angular-para:build"
           }
         },
         "test": {
